@@ -18,7 +18,7 @@ pipeline{
    stage('Deploy the project'){
      steps{
        sh 'echo "Begin Deploy"'
-       sh 'sudo cp /home/jenkins/jenkins_slave/workspace/mudir-pipeline/target/mudir-demo.war /home/ubuntu/apache-tomcat-9.0.87/webapps/'
+       sh 'sudo cp /home/jenkins/jenkins_slave/workspace/mudir-pipeline/target/webapp.war /home/ubuntu/apache-tomcat-9.0.87/webapps'
         sh 'sudo /home/ubuntu/apache-tomcat-9.0.87/bin/shutdown.sh'
         sh 'sleep 6'
         sh 'sudo /home/ubuntu/apache-tomcat-9.0.87/bin/startup.sh'
